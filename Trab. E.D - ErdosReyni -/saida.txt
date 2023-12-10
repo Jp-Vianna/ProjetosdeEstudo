@@ -1,0 +1,132 @@
+Tamanho: 10 Tempo: 24 Tempo ordenação: 20 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 10 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+
+Tamanho: 20 Tempo: 17 Tempo ordenação: 15 Possui ciclo: false
+Tamanho: 20 Tempo: 3 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 20 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 20 Tempo: 3 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 20 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 20 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 20 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 20 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 20 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 20 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+
+Tamanho: 30 Tempo: 19 Tempo ordenação: 16 Possui ciclo: false
+Tamanho: 30 Tempo: 3 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 30 Tempo: 4 Tempo ordenação: 4 Possui ciclo: false
+Tamanho: 30 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 30 Tempo: 3 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 30 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 30 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 30 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 30 Tempo: 2 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 30 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+
+Tamanho: 40 Tempo: 20 Tempo ordenação: 17 Possui ciclo: false
+Tamanho: 40 Tempo: 5 Tempo ordenação: 5 Possui ciclo: false
+Tamanho: 40 Tempo: 3 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 40 Tempo: 4 Tempo ordenação: 4 Possui ciclo: false
+Tamanho: 40 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 40 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 40 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 40 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 40 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 40 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+
+Tamanho: 50 Tempo: 25 Tempo ordenação: 22 Possui ciclo: false
+Tamanho: 50 Tempo: 6 Tempo ordenação: 6 Possui ciclo: false
+Tamanho: 50 Tempo: 5 Tempo ordenação: 5 Possui ciclo: false
+Tamanho: 50 Tempo: 4 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 50 Tempo: 3 Tempo ordenação: 3 Possui ciclo: false
+Tamanho: 50 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 50 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 50 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+Tamanho: 50 Tempo: 1 Tempo ordenação: 1 Possui ciclo: false
+Tamanho: 50 Tempo: 2 Tempo ordenação: 2 Possui ciclo: false
+
+Tamanho: 100 Tempo: 35 Tempo ordenação: 28 Possui ciclo: false
+Tamanho: 100 Tempo: 8 Tempo ordenação: 7 Possui ciclo: false
+Tamanho: 100 Tempo: 5 Tempo ordenação: 4 Possui ciclo: false
+Tamanho: 100 Tempo: 7 Tempo ordenação: 7 Possui ciclo: false
+Tamanho: 100 Tempo: 5 Tempo ordenação: 4 Possui ciclo: false
+Tamanho: 100 Tempo: 5 Tempo ordenação: 5 Possui ciclo: false
+Tamanho: 100 Tempo: 5 Tempo ordenação: 5 Possui ciclo: false
+Tamanho: 100 Tempo: 4 Tempo ordenação: 4 Possui ciclo: false
+Tamanho: 100 Tempo: 6 Tempo ordenação: 5 Possui ciclo: false
+Tamanho: 100 Tempo: 5 Tempo ordenação: 4 Possui ciclo: false
+
+Tamanho: 200 Tempo: 48 Tempo ordenação: 42 Possui ciclo: false
+Tamanho: 200 Tempo: 18 Tempo ordenação: 16 Possui ciclo: false
+Tamanho: 200 Tempo: 17 Tempo ordenação: 16 Possui ciclo: false
+Tamanho: 200 Tempo: 17 Tempo ordenação: 15 Possui ciclo: false
+Tamanho: 200 Tempo: 21 Tempo ordenação: 19 Possui ciclo: false
+Tamanho: 200 Tempo: 14 Tempo ordenação: 12 Possui ciclo: false
+Tamanho: 200 Tempo: 13 Tempo ordenação: 12 Possui ciclo: false
+Tamanho: 200 Tempo: 11 Tempo ordenação: 10 Possui ciclo: false
+Tamanho: 200 Tempo: 13 Tempo ordenação: 12 Possui ciclo: false
+Tamanho: 200 Tempo: 11 Tempo ordenação: 10 Possui ciclo: false
+
+Tamanho: 500 Tempo: 142 Tempo ordenação: 109 Possui ciclo: false
+Tamanho: 500 Tempo: 89 Tempo ordenação: 60 Possui ciclo: false
+Tamanho: 500 Tempo: 78 Tempo ordenação: 49 Possui ciclo: false
+Tamanho: 500 Tempo: 78 Tempo ordenação: 51 Possui ciclo: false
+Tamanho: 500 Tempo: 64 Tempo ordenação: 38 Possui ciclo: false
+Tamanho: 500 Tempo: 69 Tempo ordenação: 45 Possui ciclo: false
+Tamanho: 500 Tempo: 75 Tempo ordenação: 47 Possui ciclo: false
+Tamanho: 500 Tempo: 67 Tempo ordenação: 38 Possui ciclo: false
+Tamanho: 500 Tempo: 72 Tempo ordenação: 44 Possui ciclo: false
+Tamanho: 500 Tempo: 68 Tempo ordenação: 39 Possui ciclo: false
+
+Tamanho: 1000 Tempo: 477 Tempo ordenação: 267 Possui ciclo: false
+Tamanho: 1000 Tempo: 746 Tempo ordenação: 480 Possui ciclo: false
+Tamanho: 1000 Tempo: 360 Tempo ordenação: 140 Possui ciclo: false
+Tamanho: 1000 Tempo: 350 Tempo ordenação: 155 Possui ciclo: false
+Tamanho: 1000 Tempo: 348 Tempo ordenação: 149 Possui ciclo: false
+Tamanho: 1000 Tempo: 279 Tempo ordenação: 153 Possui ciclo: false
+Tamanho: 1000 Tempo: 347 Tempo ordenação: 151 Possui ciclo: false
+Tamanho: 1000 Tempo: 351 Tempo ordenação: 151 Possui ciclo: false
+Tamanho: 1000 Tempo: 347 Tempo ordenação: 150 Possui ciclo: false
+Tamanho: 1000 Tempo: 334 Tempo ordenação: 135 Possui ciclo: false
+
+Tamanho: 5000 Tempo: 24065 Tempo ordenação: 5292 Possui ciclo: false
+Tamanho: 5000 Tempo: 20308 Tempo ordenação: 4949 Possui ciclo: false
+Tamanho: 5000 Tempo: 19517 Tempo ordenação: 4987 Possui ciclo: false
+Tamanho: 5000 Tempo: 20504 Tempo ordenação: 5237 Possui ciclo: false
+Tamanho: 5000 Tempo: 28457 Tempo ordenação: 5128 Possui ciclo: false
+Tamanho: 5000 Tempo: 26217 Tempo ordenação: 4947 Possui ciclo: false
+Tamanho: 5000 Tempo: 31977 Tempo ordenação: 5221 Possui ciclo: false
+Tamanho: 5000 Tempo: 27667 Tempo ordenação: 4997 Possui ciclo: false
+Tamanho: 5000 Tempo: 28820 Tempo ordenação: 4832 Possui ciclo: false
+Tamanho: 5000 Tempo: 26581 Tempo ordenação: 4901 Possui ciclo: false
+
+Tamanho: 10000 Tempo: 139797 Tempo ordenação: 24024 Possui ciclo: false
+Tamanho: 10000 Tempo: 144001 Tempo ordenação: 25375 Possui ciclo: false
+Tamanho: 10000 Tempo: 133890 Tempo ordenação: 23470 Possui ciclo: false
+Tamanho: 10000 Tempo: 255484 Tempo ordenação: 28400 Possui ciclo: false
+Tamanho: 10000 Tempo: 139089 Tempo ordenação: 23536 Possui ciclo: false
+Tamanho: 10000 Tempo: 239165 Tempo ordenação: 23622 Possui ciclo: false
+Tamanho: 10000 Tempo: 230774 Tempo ordenação: 23555 Possui ciclo: false
+Tamanho: 10000 Tempo: 162486 Tempo ordenação: 23660 Possui ciclo: false
+Tamanho: 10000 Tempo: 142668 Tempo ordenação: 23376 Possui ciclo: false
+Tamanho: 10000 Tempo: 140092 Tempo ordenação: 23340 Possui ciclo: false
+
+Tamanho: 20000 Tempo: 983566 Tempo ordenação: 163617 Possui ciclo: false
+Tamanho: 20000 Tempo: 1380965 Tempo ordenação: 218908 Possui ciclo: false
+Tamanho: 20000 Tempo: 1172409 Tempo ordenação: 150358 Possui ciclo: false
+Tamanho: 20000 Tempo: 998985 Tempo ordenação: 132030 Possui ciclo: false
+Tamanho: 20000 Tempo: 1394537 Tempo ordenação: 178690 Possui ciclo: false
+Tamanho: 20000 Tempo: 1044845 Tempo ordenação: 140028 Possui ciclo: false
+Tamanho: 20000 Tempo: 1111764 Tempo ordenação: 133207 Possui ciclo: false
+Tamanho: 20000 Tempo: 991740 Tempo ordenação: 128891 Possui ciclo: false
+Tamanho: 20000 Tempo: 1259291 Tempo ordenação: 131755 Possui ciclo: false
+Tamanho: 20000 Tempo: 1410871 Tempo ordenação: 140607 Possui ciclo: false
+
