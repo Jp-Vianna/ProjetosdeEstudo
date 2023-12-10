@@ -1,283 +1,256 @@
 public class ordenacaoTopologica {
 	private class Elo {
-		public int chave;
-		public int contador;
-		public Elo prox;
-		public EloSuc listaSuc;
+		public int chave;	//Chave do Elo para comparacoes
+		public int contador;	//Contador para quantidade de predessores do vertice
+		public Elo prox;	//Ponteiro para o próximo elo da lista encadeada
+		public EloSuc listaSuc;	//Lista encadeada com os sucessores do vertice
 
-		/*public Elo() {
-			prox = null;
-			contador = 0;
-			listaSuc = null;
-		}*/
-
+		public Elo() {
+			prox = null;	//Inicializa vazio
+			contador = 0;	//Contador zerado
+			listaSuc = null;//Lista vazia
+		}
+		
+		//Inicializa objeto com os parametros
 		public Elo(int chave, int contador, Elo prox, EloSuc listaSuc) {
-			this.chave = chave;
+			this.chave = chave;		
 			this.contador = contador;
 			this.prox = prox;
 			this.listaSuc = listaSuc;
 		}
 	}
 
+	//Classe da lista de sucessores
 	private class EloSuc {
-		public Elo id;
-		public EloSuc prox;
+		public Elo id;		//Elo da lista
+		public EloSuc prox;	//Ponteiro para o próximo da lista
 
+		//Construtor inicializa com os parametros 
 		public EloSuc(Elo id, EloSuc prox) {
 			this.id = id;
 			this.prox = prox;
 		}
 	}
 
-	private Elo prim;
-	private int n;
+	//Atributos da classe
+	private Elo prim;	//Primeiro da lista de vertices
+	private int n;		//Quantidade de vertices
 
+	//Inicializa vazio
 	public ordenacaoTopologica() {
 		prim = null;
 		n = 0;
 	}
+	
 	//limpaGrafo ok
 	public void limpaGrafo(){
-		prim = null;
-		n = 0;
+		prim = null; 	//Zera lista do objeto
+		n = 0;	       	//Zera contador
 	}
+	
 	//Debug ok
 	private void debug() {
-		Elo atual = prim;
+		Elo atual = prim; //Pega ponteiro do primeiro para andar pela lista
 
-		while (atual != null) {
-			System.out.print(atual.chave + " predecessores: " + atual.contador + ", sucessores: ");
-			EloSuc atualSuc = atual.listaSuc;
-			while (atualSuc != null) {
-				System.out.print(atualSuc.id.chave + " -> ");
-				atualSuc = atualSuc.prox;
+		while (atual != null) { //Percorre até o ultimo
+			System.out.print(atual.chave + " predecessores: " + atual.contador + ", sucessores: ");//Mostra informacoes do elo atual
+			
+			EloSuc atualSuc = atual.listaSuc; //Pega lista de sucessores
+			while (atualSuc != null) { //Percorre sucessores ate o fim
+				System.out.print(atualSuc.id.chave + " -> "); //Mostra os sucessores
+				atualSuc = atualSuc.prox; // Caminha para o próximo elemento
 			}
 
-			System.out.println("NULL");
-			atual = atual.prox;
+			System.out.println("NULL");	//Lista acabou, mostra NULL
+			atual = atual.prox;	//Caminha para o proximo vertice
 		}
 	}
-	//executa dando erro, não passa por todos os vértices
+	
+	//executa dando erro, não passa por todos os vértices//Rever
 	public boolean executa() {
-		debug();
+		debug(); //Chama debug
 
-		while (true) {
-			if(prim == null)
+		while (true) { //Loop infinito
+			if(prim == null) //Se a lista estiver vazia acaba
 				return true;
 
-			Elo elementoSemPred = encontrarElementoSemPred();
-			if (elementoSemPred == null)
+			Elo elementoSemPred = encontrarElementoSemPred(); //Encontra elemento sem vertices anteriores
+			
+			if (elementoSemPred == null) //Se nao tiver predessor acaba
 				break;
 
-			System.out.print(elementoSemPred.chave + " ");
-			n--;
+			System.out.print(elementoSemPred.chave + " "); //Mostra elemento encontrado
+			n--;	//Como elemento foi removido, decrementa a quantidaded de elementos da lista
 
-			EloSuc atualSuc = elementoSemPred.listaSuc;
+			EloSuc atualSuc = elementoSemPred.listaSuc; //Pega os elementos sucessores
 
-			while (atualSuc != null) {
-				atualSuc.id.contador--;
-				atualSuc = atualSuc.prox;
+			while (atualSuc != null) { //Ate o fim da lista
+				atualSuc.id.contador--; //Contador de predessores diminui
+				atualSuc = atualSuc.prox;	//Ponteiro para o proximo
 			}
 
-			removerElemento(elementoSemPred);
+			removerElemento(elementoSemPred); //Remove o vertice atual
 		}
 
-        return n == 0;
-    }
+        	return n == 0; //Retorna se a lista esta vazia e ordenada
+    	}
 
+	//encontrarElemento ok
 	private Elo encontrarElemento(int chave) {
-		if(prim == null)
+		if(prim == null) //Se a lista estiver vazia acaba
 			return null;
 
-		Elo atual = prim;
+		Elo atual = prim; //Pega o primeiro
 
-		while (atual != null) {
-			if (atual.chave == chave)
-				return atual;
+		while (atual != null) { //Ate o fim
+			if (atual.chave == chave) //Se encontrou
+				return atual; //Retorna
 
-			atual = atual.prox;
+			atual = atual.prox; //Se nao, proximo
 		}
 
-		return null;
+		return null; //Caso elemento nao exista
 	}
+	
 	//encontrarElementosSemPred ok
 	private Elo encontrarElementoSemPred() {
-		Elo atual = prim;
+		Elo atual = prim; //Pega o priemeiro
 
-		while (atual != null) {
-			if (atual.contador == 0) {
-				return atual;
+		while (atual != null) { //Percorre ate o final
+			if (atual.contador == 0) { //Caso ele nao tenha antecessores
+				return atual; //Retorna e acaba
 			}
-			atual = atual.prox;
+			atual = atual.prox; //Se nao, proximo
 		}
 
-		return null;
+		return null; //Nao achou
 	}
 
+	//adicionaElemento ok
 	private void adicionaElemento(Elo novoElo) {
-		novoElo.prox = prim;
-		prim = novoElo;
-		n++;
+		novoElo.prox = prim; //Adiciona novo elemento no inicio
+		prim = novoElo; //Atualiza o primeiro da lista
+		n++; //Aumenta contador de elementos
 	}
+	
 	//adicionaAresta ok
 	public void adicionarAresta(int noA, int noB) {
-		Elo elox = encontrarElemento(noA);
-		if (elox == null) {
-			elox = new Elo(noA, 0, null, null);
-			adicionaElemento(elox);
+		Elo elox = encontrarElemento(noA); //Encontra o elemento de partida da aresta
+		if (elox == null) { //Se nao existir
+			elox = new Elo(noA, 0, null, null); //Cria vertice
+			adicionaElemento(elox); //Adiciona ele na lista
 		}
 
-		Elo eloy = encontrarElemento(noB);
-		if (eloy == null) {
-			eloy = new Elo(noB, 0, null, null);
-			adicionaElemento(eloy);
+		Elo eloy = encontrarElemento(noB); //Encontra elemento de chegada
+		if (eloy == null) { //Se nao existir
+			eloy = new Elo(noB, 0, null, null); //Cria elemento
+			adicionaElemento(eloy); //Adiciona aa lista
 		}
 
-		boolean yJaPresente = false;
-		EloSuc sucAtual = elox.listaSuc;
-		while (sucAtual != null) {
-			if (sucAtual.id == eloy) {
-				yJaPresente = true;
-				break;
+		boolean yJaPresente = false; //Verifica se o no de chagada ja possui aresta com o no de partida
+		EloSuc sucAtual = elox.listaSuc; //Pega a lista de sucessores
+		while (sucAtual != null) { //Percorre ate o fim
+			if (sucAtual.id == eloy) { //Se encontrar
+				yJaPresente = true; //Ja esta presente
+				break; //Termina
 			}
-			sucAtual = sucAtual.prox;
+			sucAtual = sucAtual.prox; //Se nao, proximo
 		}
 
-		if (!yJaPresente) {
-			elox.listaSuc = new EloSuc(eloy, elox.listaSuc);
-			eloy.contador++;
+		if (!yJaPresente) {//Se nao estiver presente
+			elox.listaSuc = new EloSuc(eloy, elox.listaSuc); //Agora noB e um destino do noA
+			eloy.contador++; //Aumenta contador de sucessores
 		}
 	}
+	
 	//removeAresta ok
 	public void removeAresta(int pai, int filho){
-		Elo eloPai = encontrarElemento(pai);
-		Elo eloFilho = encontrarElemento(filho);
+		Elo eloPai = encontrarElemento(pai); //Encontra no de partida
+		Elo eloFilho = encontrarElemento(filho); //Encontra no de chegada
 
-		if(eloPai == null)
+		if(eloPai == null) //Se partida e null acaba
 			return;
 
-		removerSucessor(eloPai, eloFilho);
+		removerSucessor(eloPai, eloFilho); //Remove o no de chegada dos sucessores
 	}
+	
 	//removeSucessor ok
 	private void removerSucessor(Elo elemento, Elo sucessor) {
-		EloSuc anterior = null;
-		EloSuc atual = elemento.listaSuc;
+		EloSuc anterior = null; //Guarda o vertice anterior para evitar percorrer a lista mais vezes
+		EloSuc atual = elemento.listaSuc; //Pega lista de sucessores
 
-		while (atual != null) {
-			if (atual.id == sucessor) {
-				if (anterior == null) {
-					elemento.listaSuc = atual.prox;
+		while (atual != null) { //Percorre ate o fim
+			if (atual.id == sucessor) { //Caso achou o vertice
+				if (anterior == null) { //Se o anterior esta vazio
+					elemento.listaSuc = atual.prox; //Atualiza
 				} else {
-					anterior.prox = atual.prox;
+					anterior.prox = atual.prox; //Guarda o anterior
 				}
-				return;
+				return; //finaliza
 			}
-			anterior = atual;
-			atual = atual.prox;
+			anterior = atual; //Atualiza anterior
+			atual = atual.prox; //Proximo da lista
 		}
 	}
+	
 	//removerElemento ok
 	private void removerElemento(Elo elemento) {
-		if (prim == elemento) {
-			prim = elemento.prox;
+		if (prim == elemento) { //Se o primeiro ja e o elemento, acaba
+			prim = elemento.prox; //Remove primeiro
 			return;
 		}
 
-		Elo atual = prim;
-		while (atual != null && atual.prox != elemento) {
-			atual = atual.prox;
+		Elo atual = prim; //Se nao, pega a lista
+		while (atual != null && atual.prox != elemento) { //Percorre ate o fim
+			atual = atual.prox; //Proximo da lista
 		}
 
-		if (atual != null)
-			atual.prox = elemento.prox;
+		if (atual != null) //Se nao acabou a lista o proximo so pode ser o elemento procurado
+			atual.prox = elemento.prox; //Remove da lista
 
 	}
+	
 	//temCiclo ok
 	public boolean temCiclo(int numNo) {
-		boolean[] visitado = new boolean[numNo];
-   		boolean[] pilhaRecursao = new boolean[numNo];
+		boolean[] visitado = new boolean[numNo]; //Vetor para marcar todos os vertices visitados
+   		boolean[] pilhaRecursao = new boolean[numNo]; //Vetor para guardar o caminho atual realizado no grafo 
 
-        for (Elo atual = prim; atual != null; atual = atual.prox) {
-            if (temCicloRecursivo(atual, visitado, pilhaRecursao)) {
-                return true;
-            }
-        }
+        	for (Elo atual = prim; atual != null; atual = atual.prox) { //Perdorre lista ate o fim
+            		if (temCicloRecursivo(atual, visitado, pilhaRecursao)) //Chama recursivamente a verificacao
+                		return true; //Se achou ciclo, retorna true
+        	}
 
-        return false;
-    }
+        	return false; //Se nao, false
+    	}
+	
 	//temCicloRecursivo ok
-    private boolean temCicloRecursivo(Elo vertice, boolean[] visitado, boolean[] pilhaRecursao) {
-		if(vertice == null)
+	private boolean temCicloRecursivo(Elo vertice, boolean[] visitado, boolean[] pilhaRecursao) {
+		if(vertice == null) //Se vertice e nulo, acaba
 			return false;
 
-		if(pilhaRecursao[vertice.chave - 1])
+		if(pilhaRecursao[vertice.chave - 1]) //Se o no ja foi alcancado no caminho atual tem ciclo
 			return true;
 
-		if(visitado[vertice.chave - 1])
+		if(visitado[vertice.chave - 1]) // Se esse no ja foi visitado, volta
 			return false;
 
-		visitado[vertice.chave - 1] = true;
+		visitado[vertice.chave - 1] = true; //Atualiza lista de visitados
 
-		pilhaRecursao[vertice.chave - 1] = true;
+		pilhaRecursao[vertice.chave - 1] = true; //Atualiza o caminho atual
 
-        EloSuc vizinhos = vertice.listaSuc;
+        	EloSuc vizinhos = vertice.listaSuc; //Pega a lista de sucessores
 
-        if(vizinhos != null){
-			while(vizinhos != null) {
-            	if (temCicloRecursivo(vizinhos.id, visitado, pilhaRecursao))
+        	if(vizinhos != null){ //Se possui sucessores continua
+			while(vizinhos != null) { //Percorre todos os sucessores
+            			if (temCicloRecursivo(vizinhos.id, visitado, pilhaRecursao)) //Chama recursivamente para o proximo vertice
 					return true;
 
-				vizinhos = vizinhos.prox;
-        	}
+				vizinhos = vizinhos.prox; //Vai para o proximo
+        		}
 		}
 
-        pilhaRecursao[vertice.chave - 1] = false;
+        	pilhaRecursao[vertice.chave - 1] = false; //Desmarca o vertice atual para explorar outro caminho em busca de ciclos
 
-        return false;
-    }
-
-	/*import java.io.BufferedReader;
-	import java.io.FileReader;
-	import java.io.IOException;*/
-	/*public void realizaLeitura(String nomeEntrada) {
-		try (BufferedReader br = new BufferedReader(new FileReader(nomeEntrada))) {
-			String linha;
-			while ((linha = br.readLine()) != null) {
-				String[] elementos = linha.split(" < ");
-				int x = Integer.parseInt(elementos[0]);
-				int y = Integer.parseInt(elementos[1]);
-
-				Elo elox = encontrarElemento(x);
-				if (elox == null) {
-					elox = new Elo(x, 0, null, null);
-					adicionaElemento(elox);
-				}
-
-				Elo eloy = encontrarElemento(y);
-				if (eloy == null) {
-					eloy = new Elo(y, 0, null, null);
-					adicionaElemento(eloy);
-				}
-
-				boolean yJaPresente = false;
-				EloSuc sucAtual = elox.listaSuc;
-				while (sucAtual != null) {
-					if (sucAtual.id == eloy) {
-						yJaPresente = true;
-						break;
-					}
-					sucAtual = sucAtual.prox;
-				}
-
-				if (!yJaPresente) {
-					EloSuc novoSuc = new EloSuc(eloy, elox.listaSuc);
-					elox.listaSuc = novoSuc;
-					eloy.contador++;
-				}
-			}
-		} catch (IOException e) {
-			System.out.println("Erro na leitura do arquivo.");
-			e.printStackTrace();
-		}
-	}*/
+        	return false; //Nao encontrou ciclos nesse caminho
+    	}
 }
